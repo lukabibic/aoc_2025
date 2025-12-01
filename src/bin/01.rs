@@ -29,7 +29,7 @@ pub fn part_one(input: &str) -> Option<u64> {
         }
     }
     println!("count = {}", count);
-    Some(count as u64)
+    Some(count)
 }
 
 pub fn part_two(input: &str) -> Option<u64> {
@@ -55,7 +55,7 @@ pub fn part_two(input: &str) -> Option<u64> {
 
     println!("count = {}", count);
 
-    Some(count as u64)
+    Some(count)
 }
 
 #[cfg(test)]
