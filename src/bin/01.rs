@@ -16,7 +16,7 @@ pub fn part_one(input: &str) -> Option<u64> {
         let dir = line.chars().next().unwrap();
         let amount: i32 = line[1..].parse().unwrap();
 
-        println!("dir = {}, amount = {}", dir, amount);
+        // println!("dir = {}, amount = {}", dir, amount);
 
         if dir == 'L' {
             current = (current - amount).rem_euclid(100);
@@ -53,7 +53,9 @@ pub fn part_two(input: &str) -> Option<u64> {
         }
     }
 
-    Some(count)
+    println!("count = {}", count);
+
+    Some(count as u64)
 }
 
 #[cfg(test)]
@@ -63,12 +65,12 @@ mod tests {
     #[test]
     fn test_part_one() {
         let result = part_one(&advent_of_code::template::read_file("examples", DAY));
-        assert_eq!(result, None);
+        assert_eq!(result, Some(1180));
     }
 
     #[test]
     fn test_part_two() {
         let result = part_two(&advent_of_code::template::read_file("examples", DAY));
-        assert_eq!(result, None);
+        assert_eq!(result, Some(6892));
     }
 }
