@@ -62,7 +62,7 @@ pub fn part_two(input: &str) -> Option<u64> {
             .filter_map(|c| c.to_digit(10).map(|d| d as u64))
             .collect();
         if digits.is_empty() {
-            println!("Bank {} contains no digits", bank);
+            // println!("Bank {} contains no digits", bank);
             continue;
         }
         // Max number in digits and the its position from index 0 to n-1
@@ -73,12 +73,12 @@ pub fn part_two(input: &str) -> Option<u64> {
         // first appearance of max
         let pos = digits.iter().position(|&x| x == *max).unwrap();
 
-        println!("Bank {}: Max value {} at position {}", bank, max, pos);
+        // println!("Bank {}: Max value {} at position {}", bank, max, pos);
 
         let mut next_array = digits[pos + 1..].to_vec();
 
         for i in (0..11).rev() {
-            println!("i = {}", i);
+            // println!("i = {}", i);
             let next_max = next_array[..next_array.len() - i].iter().max().unwrap();
             let next_max_pos = next_array.iter().position(|&x| x == *next_max).unwrap();
 
@@ -99,7 +99,7 @@ mod tests {
     #[test]
     fn test_part_one() {
         let result = part_one(&advent_of_code::template::read_file("examples", DAY));
-        assert_eq!(result, None);
+        assert_eq!(result, Some(357));
     }
 
     #[test]
