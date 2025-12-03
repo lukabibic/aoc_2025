@@ -1,4 +1,3 @@
-
 advent_of_code::solution!(3);
 
 fn parse_lines(input: &str) -> Vec<&str> {
