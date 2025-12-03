@@ -1,11 +1,10 @@
 advent_of_code::solution!(2);
 
-
 pub fn part_one(input: &str) -> Option<u64> {
     let ranges: Vec<&str> = input.trim().split(",").collect();
     println!("{:?}", ranges);
 
-    let mut sum_of_repeating_number:u64 = 0;
+    let mut sum_of_repeating_number: u64 = 0;
 
     for range in &ranges {
         let bounds: Vec<&str> = range.split("-").collect();
@@ -29,10 +28,9 @@ pub fn part_one(input: &str) -> Option<u64> {
             if first_half == second_half {
                 println!("Found matching number: {}", i);
                 sum_of_repeating_number += i;
+            }
+            // println!("start = {}, end = {}", start, end);
         }
-        // println!("start = {}, end = {}", start, end);
-    }
-
     }
 
     println!("Sum of repeating numbers: {}", sum_of_repeating_number);
@@ -40,11 +38,10 @@ pub fn part_one(input: &str) -> Option<u64> {
 }
 
 pub fn part_two(input: &str) -> Option<u64> {
-
     let ranges: Vec<&str> = input.trim().split(",").collect();
     println!("{:?}", ranges);
 
-    let mut sum_of_repeating_number:u64 = 0;
+    let mut sum_of_repeating_number: u64 = 0;
 
     for range in &ranges {
         let bounds: Vec<&str> = range.split("-").collect();
