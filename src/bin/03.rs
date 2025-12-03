@@ -1,4 +1,3 @@
-use core::net;
 
 advent_of_code::solution!(3);
 
