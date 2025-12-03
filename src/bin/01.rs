@@ -6,7 +6,7 @@ fn parse_lines(input: &str) -> Vec<&str> {
 
 pub fn part_one(input: &str) -> Option<u64> {
     // Read string file input into a vector
-    let lines = parse_lines(input);
+    let lines: Vec<&str> = parse_lines(input);
 
     let mut count = 0; // number of zeros
     let mut current = 50; // starting
